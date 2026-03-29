@@ -1,0 +1,255 @@
+
+      /* Define CSS custom properties */
+      :root {
+         --primary: #6366f1;
+         --primary-dark: #4f46e5;
+         --primary-light: #7c7ce9;
+         --bg: #020617;
+         --surface: rgba(255,255,255,0.03);
+         --surface-border: 1px solid rgba(255,255,255,0.07);
+         --text-primary: #f1f5f9;
+         --text-muted: #64748b;
+         --accent: #3b82f6;
+         --success: #10b981;
+         --danger: #ef4444;
+         --radius: 1rem;
+         --radius-sm: 0.75rem;
+         --radius-xs: 0.5rem;
+      }
+
+      /* Global styles */
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: 'Inter', sans-serif;
+         font-size: 16px;
+         line-height: 1.5;
+         color: var(--text-primary);
+         background-color: var(--bg);
+      }
+
+      /* Keyframe animations */
+      @keyframes fadeIn {
+         from {
+            opacity: 0;
+         }
+         to {
+            opacity: 1;
+         }
+      }
+
+      @keyframes slideUp {
+         from {
+            transform: translateY(100%);
+         }
+         to {
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes pulse {
+         from {
+            transform: scale(1);
+         }
+         50% {
+            transform: scale(1.1);
+         }
+         to {
+            transform: scale(1);
+         }
+      }
+
+      @keyframes glow {
+         from {
+            box-shadow: 0 0 40px rgba(99,102,241,0.15);
+         }
+         50% {
+            box-shadow: 0 0 60px rgba(99,102,241,0.3);
+         }
+         to {
+            box-shadow: 0 0 40px rgba(99,102,241,0.15);
+         }
+      }
+
+      /* Glass morphism classes */
+      .glass {
+         backdrop-filter: blur(20px);
+         background: rgba(255,255,255,0.04);
+         border: 1px solid rgba(255,255,255,0.08);
+      }
+
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+         width: 10px;
+         height: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background-color: var(--primary);
+         border-radius: var(--radius-xs);
+      }
+
+      ::-webkit-scrollbar-track {
+         background-color: var(--surface);
+      }
+
+      /* Smooth hover/focus transitions on all interactive elements */
+      button, a, input, textarea {
+         transition: all 0.2s ease-in-out;
+      }
+
+      button:hover, a:hover, input:hover, textarea:hover {
+         opacity: 0.8;
+      }
+
+      button:focus, a:focus, input:focus, textarea:focus {
+         outline: none;
+         box-shadow: 0 0 0 2px var(--primary);
+      }
+
+      /* Responsive breakpoints */
+      @media (max-width: 768px) {
+         /* Mobile styles */
+         .container {
+            padding: 20px;
+         }
+      }
+
+      @media (min-width: 769px) {
+         /* Desktop styles */
+         .container {
+            padding: 40px;
+         }
+      }
+
+      /* Navbar styles */
+      #navbar {
+         background-color: var(--primary);
+         padding: 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      #navbar a {
+         color: var(--text-primary);
+         text-decoration: none;
+         margin-right: 20px;
+      }
+
+      #navbar a:hover {
+         color: var(--primary-light);
+      }
+
+      /* Hero section styles */
+      #hero-section {
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #hero-section .glass {
+         padding: 40px;
+         width: 50%;
+         margin: 0 auto;
+      }
+
+      /* Login form styles */
+      #login-form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      #login-form input {
+         padding: 20px;
+         margin-bottom: 20px;
+         border: none;
+         border-radius: var(--radius-xs);
+         width: 100%;
+      }
+
+      #login-form button {
+         padding: 20px;
+         background-color: var(--primary);
+         color: var(--text-primary);
+         border: none;
+         border-radius: var(--radius-sm);
+         width: 100%;
+      }
+
+      #login-form button:hover {
+         background-color: var(--primary-dark);
+      }
+
+      /* Cards grid styles */
+      #cards-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px;
+      }
+
+      #cards-grid .card {
+         background-color: var(--surface);
+         padding: 20px;
+         border-radius: var(--radius);
+      }
+
+      #cards-grid .card h2 {
+         font-size: 24px;
+         margin-bottom: 10px;
+      }
+
+      #cards-grid .card p {
+         font-size: 18px;
+         margin-bottom: 20px;
+      }
+
+      /* Modal styles */
+      #modal {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0.5);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #modal .glass {
+         padding: 40px;
+         width: 50%;
+         margin: 0 auto;
+      }
+
+      /* Footer styles */
+      #footer {
+         background-color: var(--primary);
+         padding: 20px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      #footer p {
+         color: var(--text-primary);
+         margin-right: 20px;
+      }
+
+      #footer a {
+         color: var(--text-primary);
+         text-decoration: none;
+         margin-right: 20px;
+      }
+
+      #footer a:hover {
+         color: var(--primary-light);
+      }
+   
