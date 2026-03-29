@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <title>Login Page Pro</title>
+   <link rel='stylesheet' href='https://cdn.tailwindcss.com'>
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'>
+   <script src='https://unpkg.com/lucide@latest/dist/umd/lucide.min.js' defer></script>
+   <link rel='stylesheet' href='styles.css'>
+</head>
+<body class='bg-[#020617] text-[#f1f5f9]'>
+   <header class='bg-[#020617] py-4'>
+      <nav class='container mx-auto flex justify-between items-center'>
+         <a href='#' class='text-lg font-bold'>Login Page Pro</a>
+         <ul class='flex items-center space-x-4'>
+            <li><a href='#' class='text-sm'>About</a></li>
+            <li><a href='#' class='text-sm'>Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+   <main class='container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24'>
+      <section class='hero flex flex-col items-center justify-center h-screen mb-12'>
+         <h1 class='text-3xl font-bold mb-4'>Welcome to Login Page Pro</h1>
+         <form class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-6 rounded-2xl glass-effect w-80 md:w-96 lg:w-1/2 xl:w-1/3'>
+            <h2 class='text-lg font-bold mb-2'>Login</h2>
+            <div class='mb-4'>
+               <label for='email' class='block text-sm mb-1'>Email</label>
+               <input type='email' id='email' class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-2 rounded-lg w-full' required>
+            </div>
+            <div class='mb-4'>
+               <label for='password' class='block text-sm mb-1'>Password</label>
+               <input type='password' id='password' class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-2 rounded-lg w-full' required>
+            </div>
+            <button class='bg-[#6366f1] hover:bg-[#818cf8] text-white p-2 rounded-lg w-full'>Login</button>
+            <p class='text-sm mt-2'>Don't have an account? <a href='#' class='text-[#6366f1]'>Register</a></p>
+            <p class='text-sm mt-1'>Forgot password? <a href='#' class='text-[#6366f1]' data-modal-toggle='password-recovery-modal'>Recover</a></p>
+         </form>
+      </section>
+      <section class='cards-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12'>
+         <div class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-6 rounded-2xl glass-effect'>
+            <h2 class='text-lg font-bold mb-2'>Card 1</h2>
+            <p class='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+         </div>
+         <div class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-6 rounded-2xl glass-effect'>
+            <h2 class='text-lg font-bold mb-2'>Card 2</h2>
+            <p class='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+         </div>
+         <div class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-6 rounded-2xl glass-effect'>
+            <h2 class='text-lg font-bold mb-2'>Card 3</h2>
+            <p class='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+         </div>
+      </section>
+   </main>
+   <footer class='bg-[#020617] py-4'>
+      <div class='container mx-auto flex justify-between items-center'>
+         <p class='text-sm'>&copy; 2024 Login Page Pro</p>
+         <ul class='flex items-center space-x-4'>
+            <li><a href='#' class='text-sm'>Facebook</a></li>
+            <li><a href='#' class='text-sm'>Twitter</a></li>
+            <li><a href='#' class='text-sm'>Instagram</a></li>
+         </ul>
+      </div>
+   </footer>
+   <div id='password-recovery-modal' class='hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 md:p-6 lg:p-8 flex justify-center items-center h-modal md:h-full'>
+      <div class='relative p-4 w-full max-w-md h-full md:h-auto bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] rounded-2xl glass-effect'>
+         <h2 class='text-lg font-bold mb-2'>Recover Password</h2>
+         <form>
+            <div class='mb-4'>
+               <label for='email-recovery' class='block text-sm mb-1'>Email</label>
+               <input type='email' id='email-recovery' class='bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] p-2 rounded-lg w-full' required>
+            </div>
+            <button class='bg-[#6366f1] hover:bg-[#818cf8] text-white p-2 rounded-lg w-full'>Recover</button>
+         </form>
+      </div>
+   </div>
+   <script src='app.js' defer></script>
+</body>
+</html>
